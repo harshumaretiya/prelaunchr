@@ -45,4 +45,4 @@ bower.json
 .DS_Store
 .elasticbeanstalk
 
-/.env
+# /.env
