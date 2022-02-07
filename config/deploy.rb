@@ -29,7 +29,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :log_level,     :debug
 # set :keep_releases, 5
 
-set :linked_files, %w{config/database.yml config/nginx.conf config/master.key}
+set :linked_files, %w{config/database.yml config/nginx.conf config/master.key config/secrets.yml}
 set :linked_dirs,  %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 def red(str)
