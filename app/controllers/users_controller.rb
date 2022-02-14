@@ -34,6 +34,8 @@ class UsersController < ApplicationController
 
     @user = User.find_by_email(cookies[:h_email])
 
+    @stops = User::REFERRAL_STEPS
+
     respond_to do |format|
       if @user.nil?
         format.html { redirect_to root_path, alert: 'Something went wrong!' }

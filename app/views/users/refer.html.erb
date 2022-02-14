@@ -28,11 +28,9 @@
 <%
   referrals_count = @user.referrals.count
 
-  stops = User::REFERRAL_STEPS
-
   found = nil
 
-  stops.reverse_each { |stop|
+  @stops.reverse_each { |stop|
     if stop["count"] <= referrals_count and !found
       stop["selected"] = true
       found = stop
@@ -46,7 +44,7 @@
     <p class="callout brandon">Así es como funciona:</p>
     <ul class="products clearfix">
       <li class="title brandon"><p class="friends">Amigos unidos</p><p class="rewards">Productos Café Lohas</p></li>
-      <% stops.each do |stop| %>
+      <%  @stops.each do |stop| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
           <div class="circle"><%= stop["count"] %></div>
           <div class="sep"></div>
