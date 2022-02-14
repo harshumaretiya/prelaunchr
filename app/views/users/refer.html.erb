@@ -52,7 +52,7 @@
           <div class="sep"></div>
           <p><%= stop["html"].html_safe %></p>
           <div class="tooltip">
-           <%= image_tag(stop["image"], height: "254", alt: "Edit Entry") %>
+            <img src="<%= '/assets/' + stop["image"] %>" height="254"/>
           </div>
         </li>
       <% end %>
