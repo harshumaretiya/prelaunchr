@@ -51,15 +51,14 @@
           <p><%= stop["html"].html_safe %></p>
           <div class="tooltip">
             <% if index == 0 %>
-              <img src="/assets/users/cream-tooltip@2x.png" height="254"/>
+              <%= image_tag "/assets/users/cream-tooltip@2x.png" %>
             <% elsif index == 1 %>
-              <img src="/assets/users/truman@2x.png" height="254"/>
+              <img src="<%= asset_path(/assets/users/truman@2x.png) %>" height="254"/>
             <% elsif index == 2 %>
               <img src="/assets/users/winston@2x.png" height="254"/>
             <% else %>
               <img src="/assets/users/blade-explain@2x.png" height="254"/>
             <% end %>
-           t
           </div>
         </li>
       <% end %>
