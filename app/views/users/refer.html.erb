@@ -44,13 +44,22 @@
     <p class="callout brandon">Así es como funciona:</p>
     <ul class="products clearfix">
       <li class="title brandon"><p class="friends">Amigos unidos</p><p class="rewards">Productos Café Lohas</p></li>
-      <%  @stops.each do |stop| %>
+      <%  @stops.each_with_index do |stop, index| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
           <div class="circle"><%= stop["count"] %></div>
           <div class="sep"></div>
           <p><%= stop["html"].html_safe %></p>
           <div class="tooltip">
-            <img src="<%= ActionController::Base.helpers.asset_url( stop["image"] )%>" height="254"/>
+            <% if index == 0 %>
+              <img src="/assets/users/cream-tooltip@2x.png" height="254"/>
+            <% elsif index == 1 %>
+              <img src="/assets/users/truman@2x.png" height="254"/>
+            <% elsif index == 2 %>
+              <img src="/assets/users/winston@2x.png" height="254"/>
+            <% else %>
+              <img src="/assets/users/blade-explain@2x.png" height="254"/>
+            <% end %>
+           t
           </div>
         </li>
       <% end %>
