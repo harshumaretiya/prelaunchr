@@ -14,6 +14,8 @@ Prelaunchr::Application.configure do
   config.assets.compress = true
 
   config.serve_static_files = true
+  config.serve_static_files = true
+
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
